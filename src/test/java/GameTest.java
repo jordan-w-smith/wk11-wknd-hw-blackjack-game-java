@@ -25,11 +25,18 @@ public class GameTest {
         assertEquals(1, player1.getHandCount());
     }
 
-    @Test
     public void canDealTwoCardsToPlayer() {
         game1.dealCardToPlayer(deck, player1);
         game1.dealCardToPlayer(deck, player1);
         assertEquals(2, player1.getHandCount());
     }
+
+
+//    @Test
+//    public void canDealTwoCardsToPlayer() {
+//        game1.dealCardToPlayer(deck, player1);
+//        game1.dealCardToPlayer(deck, player1);
+//        assertEquals(2, player1.getHandCount());
+//    }
 
 }

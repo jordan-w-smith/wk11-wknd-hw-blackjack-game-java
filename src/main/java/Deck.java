@@ -52,7 +52,14 @@ public class Deck {
         return this.cards.get(0);
     }
 
-
+    public ArrayList getTwoCardsFromDeck() {
+        ArrayList<Card> twoCards = new ArrayList<Card>();
+        Card card1 = this.cards.get(0);
+        Card card2 = this.cards.get(1);
+        twoCards.add(card1);
+        twoCards.add(card2);
+        return twoCards;
+    }
 
 //    public void deal(Player player) {
 //        Collections.shuffle(this.cards);

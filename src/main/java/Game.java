@@ -13,4 +13,8 @@ public class Game {
         player.addCardToHand(cardFromDeck);
     }
 
+    public void dealTwoCardsToPlayer() {
+
+    }
+
 }
