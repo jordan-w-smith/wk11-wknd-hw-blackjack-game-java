@@ -56,8 +56,8 @@ public class Deck {
         ArrayList<Card> cards = new ArrayList<Card>();
         Card card1 = this.cards.get(0);
         Card card2 = this.cards.get(1);
-        Card card3 = this.cards.get(1);
-        Card card4 = this.cards.get(1);
+        Card card3 = this.cards.get(2);
+        Card card4 = this.cards.get(3);
         cards.add(card1);
         cards.add(card2);
         cards.add(card3);
