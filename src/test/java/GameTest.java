@@ -44,7 +44,7 @@ public class GameTest {
 
     @Test
     public void canPlaySingleRound() {
-        
+        assertEquals("player 2 wins",game1.playSingleRound(deck, player1, player2));
     }
 
 //    @Test

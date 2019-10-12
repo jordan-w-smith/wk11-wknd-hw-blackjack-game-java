@@ -42,13 +42,23 @@ public class Game {
         giveTwoCardsToEachPlayer(deck, player1, player2);
         int p1HandVal = player1.getValueOfPlayersHand();
         int p2HandVal = player2.getValueOfPlayersHand();
-        if (p1HandVal <= 21) {
-            if (p1HandVal < p2HandVal) {
-                return "player 2 wins"
-            }
+        if (p1HandVal > 21) {
+            return "player 1 loses";
+        }
+        else if (p2HandVal > 21) {
+            return "player 2 loses";
+        }
+        else if (p1HandVal > p2HandVal) {
+            return "player 1 wins";
+        }
+        else if (p2HandVal > p1HandVal) {
+            return "player 2 wins";
+        }
+        else if (p1HandVal == p2HandVal) {
+            return "its a draw";
         }
         else {
-            return "player 1 loses";
+            return "Result not expected js";
         }
     }
 
