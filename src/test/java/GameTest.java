@@ -13,7 +13,7 @@ public class GameTest {
     @Before
     public void before() {
         deck = new Deck();
-        player1 = new Player("Andy", true);
+        player1 = new Player("Andy", false);
         player2 = new Player("Steve", true);
         game1 = new Game();
 
@@ -24,11 +24,15 @@ public class GameTest {
         game1.dealCardToPlayer(deck, player1);
         assertEquals(1, player1.getHandCount());
     }
-
+    @Test
     public void canDealTwoCardsToPlayer() {
         game1.dealCardToPlayer(deck, player1);
         game1.dealCardToPlayer(deck, player1);
         assertEquals(2, player1.getHandCount());
+    }
+    @Test
+    public void canReceiveFourCardsFromDeck() {
+        assertEquals(4, game1.receiveFourCardsFromDeck(deck).size());
     }
 
 

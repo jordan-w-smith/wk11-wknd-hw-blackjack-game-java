@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Game {
 
-    private Game game;
+    Deck deck;
 
     public Game() {
 
@@ -13,8 +16,16 @@ public class Game {
         player.addCardToHand(cardFromDeck);
     }
 
-    public void dealTwoCardsToPlayer() {
+//    public void dealTwoCardsToPlayer() {
+//
+//    }
 
+    public ArrayList<Card> receiveFourCardsFromDeck(Deck deck) {
+        deck.populateDeck();
+        deck.shuffle();
+        ArrayList<Card> cards = new ArrayList<Card>(deck.getFourCardsFromDeck());
+//        cards.add(deck.getFourCardsFromDeck().get(0));
+        return cards;
     }
 
 }

@@ -40,10 +40,16 @@ public class DeckTest {
     }
 
     @Test
-    public void canGetTwoCardsFromDeck() {
-        deck.getTwoCardsFromDeck();
-        assertEquals(2, canGetTwoCardsFromDeck());
+    public void canPickOutFourCards() {
+        deck.populateDeck();
+        assertEquals(4, deck.getFourCardsFromDeck().size());
     }
+
+//    @Test
+//    public void canGetTwoCardsFromDeck() {
+//        deck.getTwoCardsFromDeck();
+//        assertEquals(2, deck.getTwoCardsFromDeck().size);
+//    }
 
 //    @Test
 //    public void canDeal() {
