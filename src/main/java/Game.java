@@ -38,4 +38,18 @@ public class Game {
         player2.addCardToHand(cardsToDeal.get(3));
     }
 
+    public String playSingleRound(Deck deck, Player player1, Player player2) {
+        giveTwoCardsToEachPlayer(deck, player1, player2);
+        int p1HandVal = player1.getValueOfPlayersHand();
+        int p2HandVal = player2.getValueOfPlayersHand();
+        if (p1HandVal <= 21) {
+            if (p1HandVal < p2HandVal) {
+                return "player 2 wins"
+            }
+        }
+        else {
+            return "player 1 loses";
+        }
+    }
+
 }
