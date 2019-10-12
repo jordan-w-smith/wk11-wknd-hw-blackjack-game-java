@@ -37,5 +37,11 @@ public class Player {
         public void addCardToHand(Card card) {
             this.hand.add(card);
         }
+
+        // get value of players hand
+
+        public int getValueOfPlayersHand() {
+            return this.hand.get(0).getRankValue() + this.hand.get(1).getRankValue();
+        }
 }
 

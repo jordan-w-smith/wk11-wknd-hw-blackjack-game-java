@@ -16,4 +16,10 @@ public class Card {
     public RankType getRank() {
         return this.rank;
     }
+
+    public int getRankValue() {
+        return this.rank.getValue();
+    }
+
+
 }

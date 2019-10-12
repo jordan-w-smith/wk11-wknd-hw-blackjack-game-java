@@ -28,4 +28,14 @@ public class Game {
         return cards;
     }
 
+    // function to deal 2 cards to each of 2 participating players
+
+    public void giveTwoCardsToEachPlayer(Deck deck, Player player1, Player player2) {
+        ArrayList<Card> cardsToDeal = receiveFourCardsFromDeck(deck);
+        player1.addCardToHand(cardsToDeal.get(0));
+        player1.addCardToHand(cardsToDeal.get(1));
+        player2.addCardToHand(cardsToDeal.get(2));
+        player2.addCardToHand(cardsToDeal.get(3));
+    }
+
 }

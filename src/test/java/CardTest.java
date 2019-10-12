@@ -22,4 +22,8 @@ public class CardTest {
         assertEquals(RankType.FIVE, card.getRank());
     }
 
+    @Test
+    public void canGetValue() {
+        assertEquals(5, card.getRankValue());
+    }
 }

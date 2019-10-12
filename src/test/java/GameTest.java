@@ -35,12 +35,21 @@ public class GameTest {
         assertEquals(4, game1.receiveFourCardsFromDeck(deck).size());
     }
 
+    @Test
+    public void canDealTwoCardsToEachPlayer() {
+        game1.giveTwoCardsToEachPlayer(deck, player1, player2);
+        assertEquals(2, player1.getHandCount());
+        assertEquals(2, player2.getHandCount());
+    }
+
+    @Test
+    public void canPlaySingleRound() {
+        
+    }
 
 //    @Test
-//    public void canDealTwoCardsToPlayer() {
-//        game1.dealCardToPlayer(deck, player1);
-//        game1.dealCardToPlayer(deck, player1);
-//        assertEquals(2, player1.getHandCount());
+//    public void canGetValueOfPlayersHand {
+//        assertEquals(15, player1.get);
 //    }
 
 }
