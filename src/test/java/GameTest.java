@@ -43,11 +43,6 @@ public class GameTest {
     }
 
     @Test
-    public void canPlaySingleRound() {
-        assertEquals("player 2 wins",game1.playSingleRound(deck, player1, player2));
-    }
-
-    @Test
     public void canGetWinnerAccurately() {
         Card card1 = new Card(SuitType.CLUBS, RankType.FIVE);
         Card card2 = new Card(SuitType.HEARTS, RankType.SIX);
