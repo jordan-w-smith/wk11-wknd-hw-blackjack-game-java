@@ -38,8 +38,7 @@ public class Game {
         player2.addCardToHand(cardsToDeal.get(3));
     }
 
-    public String playSingleRound(Deck deck, Player player1, Player player2) {
-        giveTwoCardsToEachPlayer(deck, player1, player2);
+    public String winnerCheck(Deck deck, Player player1, Player player2) {
         int p1HandVal = player1.getValueOfPlayersHand();
         int p2HandVal = player2.getValueOfPlayersHand();
         if (p1HandVal > 21) {
@@ -60,6 +59,11 @@ public class Game {
         else {
             return "Result not expected js";
         }
+    }
+
+    public String playSingleRound(Deck deck, Player player1, Player player2) {
+        giveTwoCardsToEachPlayer(deck, player1, player2);
+        return winnerCheck(deck, player1, player2);
     }
 
 }

@@ -47,6 +47,18 @@ public class GameTest {
         assertEquals("player 2 wins",game1.playSingleRound(deck, player1, player2));
     }
 
+    @Test
+    public void canGetWinnerAccurately() {
+        Card card1 = new Card(SuitType.CLUBS, RankType.FIVE);
+        Card card2 = new Card(SuitType.HEARTS, RankType.SIX);
+        Card card3 = new Card(SuitType.DIAMONDS, RankType.NINE);
+        Card card4 = new Card(SuitType.SPADES, RankType.TEN);
+        player1.addCardToHand(card1);
+        player1.addCardToHand(card2);
+        player2.addCardToHand(card3);
+        player2.addCardToHand(card4);
+        assertEquals("player 2 wins", game1.winnerCheck(deck, player1, player2));
+    }
 //    @Test
 //    public void canGetValueOfPlayersHand {
 //        assertEquals(15, player1.get);
